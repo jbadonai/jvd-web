@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Downloader</title>
+</head>
+<body>
+    <h1>File Downloader</h1>
+    <form id="downloadForm">
+        <label for="filename">Select a file to download:</label>
+        <select id="filename" name="filename">
+            <option value="video1.mp4">Video 1</option>
+            <option value="video2.mp4">Video 2</option>
+            <!-- Add more options for your other videos here -->
+        </select>
+        <button type="submit">Download</button>
+    </form>
+
+    <script>
+        document.getElementById('downloadForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            <!--const selectedFilename = document.getElementById('filename').value;-->
+            const selectedFilename = 'Top Praise and Worship Songs 2023 Playlist - Nonstop Christian Gospel Songs.mp4';
+            const downloadUrl = `http://127.0.0.1:5000/downloads?filename=${selectedFilename}`;
+            alert(downloadUrl);
+
+            // Create a temporary link element for downloading
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.target = '_blank'; // Open in a new tab
+            link.download = selectedFilename;
+
+            // Trigger the click event on the link
+            link.click();
+        });
+    </script>
+</body>
+</html>
