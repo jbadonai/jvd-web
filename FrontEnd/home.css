@@ -397,6 +397,21 @@
         position: relative;
     }
 
+    /* Style for the login card */
+    .about-card {
+        overflow: auto;
+        background-color: rgb(35,35,35);
+        border:1px solid gray;
+        color: rgb(180,180,180);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+        width: 80%;
+        height: 80%;
+        text-align: justify; /* Center text horizontally */
+        position: relative;
+    }
+
     .registration-card {
             background-color: rgb(35,35,35);
             border:1px solid gray;

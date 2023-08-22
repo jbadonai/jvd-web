@@ -177,3 +177,21 @@ showLoginFromRegisterBtn.addEventListener("click", () => {
     loginOverlay.style.display = "flex"; // Show the login popup
 });
 
+
+//--------------------------------
+//ABOUT
+//-----------------------------------
+
+const aboutCloseButton = document.getElementById('close-about');
+const aboutUsButton =document.getElementById('about-us');
+const aboutUsOverlay = document.getElementById('about-overlay');
+
+
+aboutUsButton.addEventListener("click", () =>{
+    aboutUsOverlay.style.display = 'flex';
+});
+
+aboutCloseButton.addEventListener("click", () => {
+    aboutUsOverlay.style.display = "none";
+});
+
